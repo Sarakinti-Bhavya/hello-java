@@ -13,6 +13,14 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
+        
+        
+        stage('Test') {
+    steps {
+        echo 'Running tests...'
+        sh 'exit 1'
+    }
+}
     }
       post {
         success {
